@@ -78,7 +78,7 @@ int   ano, h, m, s, D, M, A; //Variáveis pra o relógio RTC
 double tmp1 = 0.0, hmd1 = 0.0;
 double tmp2 = 0.0, hmd2 = 0.0;
 double vazao = 0.0;
-doubletaxaSecagem=0;
+double taxaSecagem=0;
 
 
 float UAint = 0;//Umidade absoluta Sensor interno
@@ -88,7 +88,7 @@ float totalizador;
 void setup() {
   UAint = UA(tmp1, hmd1);
   UAext = UA(tmp2, hmd2);
-  taxaSecagem = TS(vazap, UAint, UAext);
+  taxaSecagem = TS(vazao, UAint, UAext);
 
   
   g = EEPROM[0]; //g recebe o estado anterior que estava
